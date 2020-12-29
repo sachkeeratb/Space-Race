@@ -93,14 +93,14 @@ function draw() {
 function spawnAsteroids() {
   if(frameCount % 60 === 0) {
     var asteroid = createSprite(600,-10,20,30);
-    asteroid.x=Math.round(random(100,600));
+    asteroid.x=Math.round(random(0,500));
     asteroid.setCollider('circle',0,0,45);
     asteroid.addImage(asteroidIMG);
 
     asteroid.scale = 0.3;
     asteroid.velocityY = 20;
     
-    asteroid.lifetime = 160000;
+    asteroid.lifetime = 16000;
     asteroid.depth = player.depth;
     player.depth +=1;
 
